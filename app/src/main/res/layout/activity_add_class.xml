@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.tributetech.classmate.activities.AddClass"
+    >
+    <!--TOP -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_class_top_layout"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:background="@color/colorPrimary"
+        android:elevation="8dp"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_class_name"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:textColorHint="@color/white"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/class_name_text_field"
+                style="@style/Base.TextAppearance.AppCompat.Display1"
+                android:hint="Class Name"
+                android:backgroundTint="@color/white"
+                android:textColorHint="#ccc"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/dark_background_text_color"
+                android:textIsSelectable="false">
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_class_name"
+            android:id="@+id/view"
+            android:paddingTop="36dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="@dimen/activity_vertical_margin"
+
+            android:textColorHint="@color/white"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/add_class_location_text_field"
+                android:layout_height="wrap_content"
+                android:hint="Location"
+                style="@style/Base.TextAppearance.AppCompat.Title"
+                android:textSize="@dimen/material_text_subhead"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/dark_background_text_color"
+                android:textColorHint="#ccc"
+                android:textCursorDrawable="@null">
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_class_top_layout"
+        android:orientation="vertical">
+    <!-- START TIME-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startTimeLayout"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_class_start_time_icon"
+            android:src="@drawable/access_time_white_36dp"
+            android:foregroundTintMode="add"
+            android:tint="@color/secondary_text"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Class Start Time     8:06 PM"
+            android:id="@+id/add_class_start_time_picker"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/add_class_start_time_icon"
+            android:layout_toEndOf="@+id/add_class_start_time_icon"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"/>
+
+    </RelativeLayout>
+    <!-- END TIME-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/endTimeLayout"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_class_end_time_icon"
+            android:src="@drawable/access_time_white_36dp"
+            android:foregroundTintMode="add"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Class End Time       8:06 PM"
+            android:layout_centerVertical="true"
+            android:id="@+id/add_class_end_time_picker"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_toRightOf="@+id/add_class_end_time_icon"
+            android:layout_toEndOf="@+id/add_class_end_time_icon"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Class End Time  "
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:id="@+id/add_class_end_time_title"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/add_class_end_time_icon"
+            android:layout_toEndOf="@+id/add_class_end_time_icon"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />-->
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <View android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/divider_color">
+    </View>
+    <!--DAY LAYOUT-->
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_class_days_layout"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/days_icon"
+            android:src="@drawable/date_today_36dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="18dp"
+            android:foregroundTintMode="add" />
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Set Days"
+            android:id="@+id/add_class_days_text"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/days_icon"
+            android:layout_toEndOf="@+id/days_icon" />
+
+
+    </RelativeLayout>
+    <View android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/divider_color">
+    </View>
+
+    <!--SELECT SEMESTER
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_class_select_semester"
+
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/add_class_semster_icon"
+            android:src="@drawable/date_range_36"
+            android:tint="@color/secondary_text"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="18dp"
+            android:foregroundTintMode="add" />
+
+        <com.tributetech.classmate.customui.SemesterSpinner
+            android:id="@+id/add_class_semester_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_toRightOf="@+id/add_class_semster_icon"
+            android:layout_toEndOf="@+id/add_class_semster_icon">
+
+        </com.tributetech.classmate.customui.SemesterSpinner>
+
+
+    </RelativeLayout>
+    <View android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/divider_color">
+    </View> -->
+
+    <!--COLOR LAYOUT -->
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:id="@+id/add_class_color_layout"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/color_lens_color_indicator"
+            android:src="@drawable/color_lens_36"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="18dp"
+            android:foregroundTintMode="add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Color"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:id="@+id/class_color_text_view"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/color_lens_color_indicator"
+            android:layout_toEndOf="@+id/color_lens_color_indicator" />
+
+    </RelativeLayout>
+    <View android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/divider_color">
+    </View>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

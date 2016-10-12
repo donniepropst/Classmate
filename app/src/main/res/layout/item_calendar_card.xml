@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:style="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f9f9f9"
+    >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Final Exam"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/calendar_item_assignment_name"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="COSC 350"
+
+            android:id="@+id/calendar_item_class_name"
+            android:layout_toRightOf="@id/calendar_item_assignment_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="5/28/2016"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/calendar_item_due_date"
+            android:layout_below="@id/calendar_item_class_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="5:50 PM"
+            android:id="@+id/calendar_item_due_time"
+            android:layout_below="@+id/calendar_item_class_name"
+            android:layout_toRightOf="@id/calendar_item_due_date"
+            android:layout_marginLeft="8dp"
+            android:paddingBottom="8dp"
+             />
+
+
+        </RelativeLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/calendar_item_due_date"
+        android:background="@color/divider_color"
+        >
+    </View>
+</LinearLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.tributetech.classmate.activities.AddAssignment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/add_assignment_top_layout"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:background="@color/colorPrimary"
+    android:elevation="8dp">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_assignment_name"
+        android:paddingRight = "16dp"
+        android:paddingTop= "8dp"
+        android:paddingBottom="16dp"
+        android:textColorHint="@color/white"
+        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/assignment_name_text_field"
+            android:hint="@string/assignment_name"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:textSize="32dp"
+            android:textColorHint="#ccc"
+            android:textColor="@color/dark_background_text_color"
+            android:textIsSelectable="false"
+            android:backgroundTint="@color/white"
+            android:textCursorDrawable="@null">
+        </EditText>
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>
+
+<!--Detail spec layout -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/add_assignment_top_layout"
+    android:orientation="vertical">
+
+    <!-- Class selection spinner -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_assignment_class_layout"
+        android:paddingTop="16dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="16dp"
+        android:layout_below="@+id/add_assignment_top_layout">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_assignment_class_icon"
+            android:src="@drawable/white_class"
+            android:foregroundTintMode="add"
+            android:tint="@color/secondary_text"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/add_assignment_class_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_toRightOf="@+id/add_assignment_class_icon"
+            android:layout_toEndOf="@+id/add_assignment_class_icon">
+        </android.support.v7.widget.AppCompatSpinner>
+    </RelativeLayout>
+    <View android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/divider_color">
+    </View>
+
+    <!-- Due Date Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="16dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_assignment_due_date_icon"
+            android:src="@drawable/date_today_36dp"
+            android:foregroundTintMode="add"
+            android:tint="@color/secondary_text"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Due Date"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:id="@+id/add_assignment_due_date_title"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/add_assignment_due_date_icon"
+            android:layout_toEndOf="@+id/add_assignment_due_date_icon"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Mon, Feb 15 2016"
+            android:id="@+id/assignment_due_date"
+            android:layout_centerVertical="true"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_alignTop="@+id/add_assignment_due_date_title"
+            android:layout_toRightOf="@+id/add_assignment_due_date_title"
+            android:layout_toEndOf="@+id/add_assignment_due_date_title"
+            android:layout_marginLeft="46dp"
+            android:layout_marginStart="46dp" />
+
+
+    </RelativeLayout>
+    <View android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/divider_color">
+    </View>
+
+    <!-- Due Time Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="16dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_assignment_due_time_icon"
+            android:src="@drawable/access_time_white_36dp"
+            android:foregroundTintMode="add"
+            android:tint="@color/secondary_text"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Due Time"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:id="@+id/add_assignment_due_time_title"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/add_assignment_due_time_icon"
+            android:layout_toEndOf="@+id/add_assignment_due_time_icon"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="8:06 PM"
+            android:layout_centerVertical="true"
+            android:id="@+id/add_assignment_due_time_picker"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_alignTop="@+id/add_assignment_due_time_title"
+            android:layout_toRightOf="@+id/add_assignment_due_time_title"
+            android:layout_toEndOf="@+id/add_assignment_due_time_title"
+            android:layout_marginLeft="46dp"
+            android:layout_marginStart="46dp" />
+
+
+    </RelativeLayout>
+    <View android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/divider_color">
+    </View>
+
+    <!--Reminder Checkbox Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="16dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_assignment_reminder_icon"
+            android:src="@drawable/add_reminder_36dp"
+            android:foregroundTintMode="add"
+            android:tint="@color/secondary_text"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remind_me"
+            android:id="@+id/remind_checkbox"
+            android:checked="false"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/add_assignment_reminder_icon"
+            android:layout_toEndOf="@+id/add_assignment_reminder_icon"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:paddingLeft="0dp" />
+
+
+
+    </RelativeLayout>
+    <View android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/divider_color">
+    </View>
+
+    <!--Description Addon Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_assignment_add_description_icon"
+            android:src="@drawable/add_reminder_36dp"
+            android:foregroundTintMode="add"
+            android:tint="@color/secondary_text"
+            android:layout_alignBottom="@+id/add_assignment_description"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_assignment_description"
+            android:textColorHint="#555"
+            app:hintTextAppearance="@color/secondary_text"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/add_assignment_add_description_icon"
+            android:layout_toEndOf="@+id/add_assignment_add_description_icon">
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/assignment_description_text_field"
+                android:hint="Assignment Description(optional)"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textColorHint="@color/secondary_text"
+                android:textColor="@color/secondary_text"
+                android:textIsSelectable="false"
+                android:backgroundTint="@color/secondary_text"
+                android:textCursorDrawable="@color/secondary_text"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/add_assignment_add_description"
+                android:layout_toEndOf="@+id/add_assignment_add_description">
+            </android.support.v7.widget.AppCompatEditText>
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+</RelativeLayout>
+
+
+

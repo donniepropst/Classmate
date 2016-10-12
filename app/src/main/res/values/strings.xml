@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">ClassMate</string>
+    <string name="title_activity_home">ClassMate</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="assignment_name">Assignment Name</string>
+    <string name="assignment_due">Due Date</string>
+    <string name="assignment_due_time">Due Time</string>
+    <string name="assignment_description">Description (optional)</string>
+    <string name="class_name">Class Name</string>
+    <string name="class_location">Location (optional)</string>
+    <string name="semester_start">Semester Start</string>
+    <string name="semester_end">Semester End</string>
+    <string name="class_start">Class Start Time</string>
+    <string name="class_end">Class End Time</string>
+    <string name="remind_me">Remind Me About This</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="color_array">
+        <item>#C62828</item>
+        <item>#D84315</item>
+        <item>#E53935</item>
+        <item>#FF5722</item>
+        <item>#EF6C00</item>
+        <item>#AD1457</item>
+        <item>#D81B60</item>
+        <item>#6A1B9A</item>
+        <item>#8E24AA</item>
+        <item>#4527A0</item>
+        <item>#5E35B1</item>
+        <item>#283593</item>
+        <item>#3F51B5</item>
+        <item>#03A9F4</item>
+        <item>#2196F3</item>
+        <item>#0277BD</item>
+        <item>#00838F</item>
+        <item>#00695C</item>
+        <item>#2E7D32</item>
+        <item>#43A047</item>
+        <item>#558B2F</item>
+    </string-array>
+    <string name="title_activity_test">Test</string>
+
+    <string name="banner_ad_unit_id">na</string>
+
+
+</resources>
+
